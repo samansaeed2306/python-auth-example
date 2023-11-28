@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build Docker Image
-        run: docker build -t saman1/A4-python:latest .
+        run: docker build -t saman1/a-python:latest .
 
       - name: Push Docker Image to Dockerhub
         run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker push saman1/A4-python:latest
+          docker push saman1/a-python:latest
